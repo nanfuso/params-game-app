@@ -1,0 +1,11 @@
+<%= form_tag "/form_send_guess", method: :post do %>
+
+<div>Guess a number: <input type="text" name="user_guess"> </div>
+
+<input type="submit" value="Submit guess">
+<% end %>
+
+<% if @user_guess %>
+<h2> Your guess of <%= @user_guess %> was <%= @answer_message %> </h2>
+
+<% end %>
